@@ -1,20 +1,33 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
 
-# Run and deploy your AI Studio app
+# 🥤 ShakeMaster Pro - Telegram Mini App
 
-This contains everything you need to run your app locally.
+Высокоинтенсивная игра для Telegram, где нужно трясти телефон, чтобы наполнить баночку и заработать очки.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1abxtpQdWeoxi3y1eLoNiOwrXREIaBTMJ
+## 🚀 Деплой на Vercel
 
-## Run Locally
+1. **Создайте репозиторий на GitHub** и загрузите туда файлы проекта.
+2. **Подключите проект к Vercel**:
+   - Выберите ваш репозиторий.
+   - Framework Preset: **Other** (или Vite, если определится автоматически).
+   - Build Command: `npm run build`.
+   - Output Directory: `dist`.
+3. **Настройте API Key**:
+   - Перейдите в Settings -> Environment Variables.
+   - Добавьте переменную `API_KEY` со значением вашего ключа Gemini API.
+4. **Telegram Bot**:
+   - Создайте бота в [@BotFather](https://t.me/BotFather).
+   - Используйте команду `/newapp`.
+   - В поле URL укажите ссылку, которую выдал Vercel.
 
-**Prerequisites:**  Node.js
+## 🛠 Технологии
+- React 19 + TypeScript
+- Vite (сборщик)
+- Tailwind CSS (стили)
+- Gemini API (мотивационные сообщения)
+- Telegram Web App SDK
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 📱 Особенности
+- Гироскопическое управление (детектор тряски).
+- Интеграция с Haptic Feedback (вибрация).
+- Сохранение рекордов локально.
+- Генерация AI-комментариев после каждой игры.
