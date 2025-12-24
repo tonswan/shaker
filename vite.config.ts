@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   define: {
@@ -9,6 +10,10 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    target: 'esnext'
+    target: 'esnext',
+    sourcemap: false
+  },
+  server: {
+    port: 3000
   }
 });

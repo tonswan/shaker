@@ -1,7 +1,9 @@
 
-import { GoogleGenAI, Type } from "@google/genai";
+import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// Satisfy TS compiler for process.env in Vite context
+const apiKey = (process.env as any).API_KEY;
+const ai = new GoogleGenAI({ apiKey });
 
 export const getMotivationalMessage = async (score: number, mode: string) => {
   try {
